@@ -20,7 +20,7 @@ jobs:
     steps:
     - name: Dump Password
       run: |
-        echo Password is $PASSWORD {{$secrets.key1}}
+        echo Password is $PASSWORD ${{secrets.key1}}
         if [[ $PASSWORD == *"PROD"* ]]; then
           echo "This is the PROD password!"
         else
